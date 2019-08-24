@@ -6,7 +6,6 @@ add_executable(my_app src/main.c src/use_component.c)
 
 include_directories(my_app PRIVATE "amazon-freertos/demos/include")
 include_directories(my_app PRIVATE "amazon-freertos/demos/network_manager")
-include_directories(my_app PRIVATE "amazon-freertos/libraries/c_sdk/standard/ble/include")
 
 # Tell IDF build to link against this target
 set(IDF_PROJECT_EXECUTABLE my_app)
@@ -25,6 +24,7 @@ add_subdirectory(amazon-freertos)
 
 target_link_libraries(my_app PRIVATE AFR::wifi)
 target_link_libraries(my_app PRIVATE AFR::utils)
+target_link_libraries(my_app PRIVATE AFR::ble)
 target_link_libraries(my_app PRIVATE AFR::ble_hal)
 target_link_libraries(my_app PRIVATE AFR::platform)
 target_link_libraries(my_app PRIVATE AFR::dev_mode_key_provisioning)
