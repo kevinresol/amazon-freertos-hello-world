@@ -4,8 +4,8 @@ project(my_app)
 
 add_executable(my_app main.c)
 
-# include_directories(my_app PRIVATE "amazon-freertos/demos/include")
-# include_directories(my_app PRIVATE "amazon-freertos/demos/network_manager")
+include_directories(my_app PRIVATE "amazon-freertos/demos/include")
+include_directories(my_app PRIVATE "amazon-freertos/demos/network_manager")
 include_directories(my_app PRIVATE "amazon-freertos/libraries/c_sdk/standard/ble/include")
 
 # Tell IDF build to link against this target
