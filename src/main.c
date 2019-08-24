@@ -127,7 +127,7 @@ int app_main( void )
             ESP_ERROR_CHECK( esp_bt_controller_mem_release( ESP_BT_MODE_BLE ) );
         #endif /* if BLE_ENABLED */
         /* Run all demos. */
-        // DEMO_RUNNER_RunDemos();
+        DEMO_RUNNER_RunDemos();
     }
 
     /* Start the scheduler.  Initialization that requires the OS to be running,

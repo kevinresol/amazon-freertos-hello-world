@@ -22,6 +22,10 @@ set(AFR_BOARD espressif.esp32_devkitc CACHE INTERNAL "")
 
 add_subdirectory(amazon-freertos)
 
+target_link_libraries(my_app PRIVATE AFR::demo_mqtt)
+target_link_libraries(my_app PRIVATE AFR::demo_ble)
+target_link_libraries(my_app PRIVATE AFR::demo_ble_numeric_comparison)
+
 target_link_libraries(my_app PRIVATE AFR::wifi)
 target_link_libraries(my_app PRIVATE AFR::utils)
 target_link_libraries(my_app PRIVATE AFR::ble)
@@ -29,5 +33,5 @@ target_link_libraries(my_app PRIVATE AFR::ble_hal)
 target_link_libraries(my_app PRIVATE AFR::platform)
 target_link_libraries(my_app PRIVATE AFR::dev_mode_key_provisioning)
 target_link_libraries(my_app PRIVATE AFR::pkcs11)
+target_link_libraries(my_app PRIVATE AFR::mqtt)
 target_link_libraries(my_app PRIVATE 3rdparty::pkcs11)
-# target_link_libraries(my_app PRIVATE AFR::mqtt)
