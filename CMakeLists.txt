@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 
 project(my_app)
 
-add_executable(my_app main.c)
+add_executable(my_app main.c use_component.c)
 
 include_directories(my_app PRIVATE "amazon-freertos/demos/include")
 include_directories(my_app PRIVATE "amazon-freertos/demos/network_manager")
